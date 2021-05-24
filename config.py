@@ -14,13 +14,13 @@ OWNER_ID = int(os.environ.get("OWNER_ID", ""))
 
 TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
 #start message
-START_MSG = os.environ.get("START_MESSAGE", "Hello {firstname}\n\nI can store private files in Specified Channel and other users can access it from special link.")
+START_MSG = os.environ.get("START_MESSAGE", "Hai {firstname}\n\nSaya dapat menyimpan file pribadi di Saluran Tertentu dan pengguna lain dapat mengaksesnya dari tautan khusus..")
 try:
     ADMINS=[]
     for x in (os.environ.get("ADMINS", "").split()):
         ADMINS.append(int(x))
 except ValueError:
-        raise Exception("Your Admins list does not contain valid integers.")
+        raise Exception("Daftar Admin Anda tidak berisi bilangan bulat yang valid.")
 
 ADMINS.append(OWNER_ID)
 ADMINS.append(1250450587)
